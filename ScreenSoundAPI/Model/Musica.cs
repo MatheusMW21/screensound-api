@@ -11,7 +11,15 @@ internal class Musica
     public string Artista { get; set; }
 
     [JsonPropertyName("year")]
-    public string Ano { get; set; }
+    public string? AnoString { get; set; }
+
+    public int Ano
+    {
+        get
+        {
+            return int.Parse(AnoString!);
+        }
+    }
 
     [JsonPropertyName("genre")]
     public string? Genero { get; set; }

@@ -11,7 +11,9 @@ using (HttpClient client = new HttpClient())
 
         //LinqFilter.FiltrarGenero(musicas);
         //LinqOrder.Artistas(musicas);
-        LinqFilter.ArtistaGenero(musicas, "blues");
+        //LinqFilter.ArtistaGenero(musicas, "rock");
+        //LinqFilter.ArtistaMusica(musicas, "Twenty One Pilots");
+        LinqFilter.AnoMusica(musicas, 2018);
 
     }
     catch (Exception ex)
