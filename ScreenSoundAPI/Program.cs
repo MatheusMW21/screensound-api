@@ -13,8 +13,16 @@ using (HttpClient client = new HttpClient())
         //LinqOrder.Artistas(musicas);
         //LinqFilter.ArtistaGenero(musicas, "rock");
         //LinqFilter.ArtistaMusica(musicas, "Twenty One Pilots");
-        LinqFilter.AnoMusica(musicas, 2018);
+        //LinqFilter.AnoMusica(musicas, 2018);
 
+        var musicasFavoritas = new MusicasFavoritas("Matheus");
+        musicasFavoritas.Adicionar(musicas[1]);
+        musicasFavoritas.Adicionar(musicas[377]);
+        musicasFavoritas.Adicionar(musicas[4]);
+        musicasFavoritas.Adicionar(musicas[6]);
+        musicasFavoritas.Adicionar(musicas[1467]);
+
+        musicasFavoritas.Exibir();
     }
     catch (Exception ex)
     {
